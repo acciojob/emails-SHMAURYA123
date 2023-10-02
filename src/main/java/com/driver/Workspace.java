@@ -33,6 +33,7 @@ public class Workspace extends Gmail{
           Collections.sort(calendar,new sortMeeting());
 
           Meeting meet=calendar.get(0);
+          m.add(meet);
           localTime=calendar.get(0).getEndTime();
            for(int i=1;i<calendar.size();i++){
               if(calendar.get(i).getStartTime().compareTo(localTime)>0){
